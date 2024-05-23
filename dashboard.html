@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="dashboard-body">
+    <header class="dashboard-header">
+        <h1 id="heading">PANDEY ENTERPRISES</h1>
+        <p><span>&mdash;&mdash;&mdash;</span> Service For Society <span>&mdash;&mdash;&mdash;</span></p>
+        <div id="icon-container" onclick="showNav()"><i id="icon">&#x25BC;</i></div>
+    </header>
+    <nav id="dashboard-navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="dashboard-section">
+        <div id="hamburger-icon" onclick="menubarClick()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <p id="greeting">Welcome <span id="first-name">Ramish</span></p>
+        <div id="user-pic">
+            <img src="partners-image/laddoo.jpg" alt="">
+        </div>
+        <div>
+            <a href="partners.html" id="logout" onclick="alert('logged out successfully')">logout</a>
+        </div>
+    </section>
+    <section id="menubar">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Edit Current Load</a></li>
+            <li><a href="#">Edit Total Load</a></li>
+            <li><a href="#">Add Facility</a></li>
+            <li><a href="#">Track Facility</a></li>
+            <li><a href="#">Facility Control</a></li>
+            <li><a href="salaryCalculator.html">Salary Calculator</a></li>
+            <li><a href="#">Apply Leave</a></li>
+            <li><a href="#">Connect Admin</a></li>
+            <li><a href="#">Contact Developer</a></li>
+        </ul>
+    </section>
+    <section class="updates-section home-section">
+
+    </section>
+    <footer>
+        <p>&#169; All Right Reserved</p>
+        <a href="#heading">&uArr; Back To Top &uArr;</a>
+        <a href="contactUs.html">Contact Us</a>
+    </footer>
+    <script src="dashboard.js"></script>
+</body>
+</html>

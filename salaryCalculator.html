@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandey Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .home-section {
+            background-color: white;
+        }
+
+        nav {
+            z-index: 3;
+        }
+        .updates-section{
+            min-height: 620px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="heading">PANDEY ENTERPRISES</h1>
+        <p><span>&mdash;&mdash;&mdash;</span> Service For Society <span>&mdash;&mdash;&mdash;</span></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="routes.html">Routes</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="contactUs.html">Contact </a></li>
+        </ul>
+    </nav>
+
+    <section class="updates-section home-section">
+        <h3>Salary Calculator</h3>
+        <div class="display-container flex-container">
+            <div class="receipt">
+                <h4 id="agent-name">Agent's Name</h4>
+                <div class="details-conatiner flex-container">
+                    <div class="personal-details">
+                        <ul>
+                            <li>Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id="id"></span></li>
+                            <li>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <span id="age"></span></li>
+                            <li>Mobile : <span id="mobile"></span></li>
+                        </ul>
+                    </div>
+                    <div class="work-status">
+                        <ul>
+                            <li>Outstanding Balance : <span id="agent-ob"></span></li>
+                            <li>Total Delievered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <span
+                                    id="total-del"></span></li>
+                            <li>Total Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span
+                                    id="total-payment"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calculator-control-container flex-container">
+            <div id="controlPanel" class="flex-container">
+                <button id="addData" onclick="showSelect(1)">Add Agent Data</button>
+                <form action="" id="select">
+                    <select name="" id="selection" onchange="caller(123)">
+                        <option value="">Our Partners</option>
+                        <option value="0">Ashish Kumar Pandey</option>
+                        <option value="1">Ravi Prakash Pandey</option>
+                        <option value="2">Sumit Kumar</option>
+                        <option value="3">Vishnu Kumar Gupta</option>
+                        <option value="4">Amresh Kumar Pandey</option>
+                    </select>
+                </form>
+                <button id="viewData" onclick="showSelect(2)">View Agent Data</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&#169; All Right Reserved</p>
+        <a href="#heading">&uArr; Back To Top &uArr;</a>
+        <a href="contactUs.html">Contact Us</a>
+    </footer>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

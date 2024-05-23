@@ -1,0 +1,601 @@
+@font-face {
+    font-family: 'ProtestRiot-Regular' ;
+    src: url('fonts/Protest_Riot/ProtestRiot-Regular.ttf');
+}
+*{
+    margin: 0;
+}
+body{
+    background-color: blanchedalmond;
+}
+.active{
+    background-color: green;
+    color: white;
+}
+/*header styling starts from here*/
+header {
+    background-color: rgb(71, 158, 212);
+
+    
+}
+header h1 {
+	color: #d32c24;
+    font-size: 6vw;
+    font-family: ProtestRiot-Regular;
+    text-align: center;
+    padding-top: 5px;
+    text-shadow: 1px 1px 5px rgb(255, 251, 2) ;
+}
+header p{
+    font-size: 2.3vw;
+    text-align: center;
+    font-family: cursive;
+    padding-bottom: 10px;
+}
+header p span{
+    letter-spacing: -4px;
+}
+nav {
+
+    height: auto;
+	background-color: #f1c040;
+    position:sticky;
+    top: -1px;
+    padding: 1px 60px 1px 21px;
+
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 3vw;  
+}
+nav ul li{
+    margin:5px 0;
+
+}
+nav ul a{
+    text-decoration: none;
+    background-color: #e3a303;
+    padding: 6px 25px;
+    font-variant: small-caps;
+    color: purple;
+} 
+/*Header styling ends here*/
+/*section styling start from here*/
+.updates-section{
+    width: 90%;
+    height: 620px;
+    border: 2px solid red;
+    margin: 20px auto 5px;
+    background-color: white;  
+}
+.home-section{
+    background-image: url('images/logo.jpg');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.updates-section h3{
+    text-align: center;
+    font-size: 3.6vw;
+    color: #d32c24;
+    background-color: rgb(71, 158, 212);
+    padding: 10px 0px;
+    text-shadow: 1px 1px 5px rgb(255, 251, 2);
+    border-bottom: 15px solid #f1c040;
+
+}
+/* section styling end here*/
+footer{
+    background-color:  rgb(71, 158, 212);
+    font-size: 1.6vw;
+    text-align: center;
+    padding: 4px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+footer a{
+    text-decoration: none;;
+}
+/* routes styling */
+.routes-section{
+    overflow: hidden;
+}
+.nav-routes{
+    position: static; 
+}
+#routes-container{
+    width: 97%;
+    margin: 5px auto auto;
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.routes-container-child{
+    width: 33%;
+    max-height: 520px;
+    background-color: rgba(99,99,99,0.5);
+    overflow: scroll;
+    position: relative;
+    
+}
+body:has(.routes-container:hover) nav{
+    color: black;
+}
+.routes-container-child h4{
+    font-size: 2vw;
+    text-align: center;
+    padding: 5px;
+    background-color:#d32c24;
+    position: sticky;
+    top: 0px;
+}
+.routes-container-child h4 a{
+    text-decoration: none;
+    color: white;
+
+}
+.routes-container-child ol{
+    list-style-position: inside;
+    padding: 0;
+    
+}
+.routes-container-child li{
+    font-size: 20px;
+    
+}
+.routes-container-child li:nth-child(even){
+    background-color: rgba(60,60,60,0.5);
+}
+.routes-container-child ol a{
+    text-decoration: none;
+    padding-left: 10px;
+}
+/* routes styling ends here*/
+/*dashboard page styles start here*/
+.dashboard-header{
+    position: relative;
+}
+#icon-container {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #d32c24;
+    bottom: 10px;
+    right: 20px;
+    font-size: 30px;
+}
+#icon-container #icon{
+    display: block;
+    height: 35px;
+    line-height: 42px;
+    text-align: center;
+    color:#e3a303;
+}
+#dashboard-navbar{
+    height: 0px;
+    visibility: hidden;
+    transition: visibility 1s ease-in-out, height 1s ease-in-out;
+} 
+#dashboard-section{
+    height: 53px;
+    background-color:#d32c24;
+    display: flex;
+    position: relative;
+    margin-top: -1px;
+}
+#hamburger-icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    padding: 6px;
+    margin-left: 5px;
+}
+#hamburger-icon div{
+    height: 3px;
+    width: 70%;
+    background-color: white;
+}
+#greeting{
+    position: absolute;
+    right: 186px;
+    font-size: 2.2vw;
+    line-height: 50px;
+    color: white;
+}
+#user-pic{
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 115px; 
+    border-radius: 50%;
+    overflow: hidden;  
+    margin-top: 4px;
+    outline: 2px solid #f1c040;
+}
+#user-pic img{
+    width: 100%;
+    height: auto; 
+}
+#logout {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 1.9vw;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+#menubar {
+	width: 250px;
+	height: auto;
+	background-color: #f7e1ab;
+	position: absolute;
+	top: 200px;
+	border: 2px solid rgb(71, 158, 212);
+    border-left: none;
+    margin-left: -252px;
+    transition: margin-left 1s ease-in-out;
+}
+#menubar ul{
+    list-style-type: none;
+    padding: 10px 20px;
+}
+#menubar a{
+    display: block;
+    font-size: 2vw;
+    text-decoration: none;
+    border-bottom: 2px solid grey;
+}
+#menubar li:not(:first-child,:last-child){
+    margin: 9px 0;
+    padding: 10px 0;
+}
+/* dashboard page styles end here */
+/* contact us styling starts from here */
+
+#helpline-center{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(71, 158, 212);
+    border-bottom: 10px solid #e3a303;
+    padding: 6px;
+}
+#helpline-center h3{
+    border: none;
+    padding: 0;
+}
+#helpline-center img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.address-section{
+    display: flex;
+    justify-content: space-between;
+}
+.address h3{
+    background: none;
+    border-width: 5px;
+    padding-bottom: 5px;
+    font-size: 2.5vw;
+}
+.address{
+    width: 350px;
+    margin-top: 315px;
+    padding: 8px 25px;
+}
+.address p{
+    font-size: 1.4vw;
+    text-align: center;
+    font-style: normal;
+    font-family: Verdana,Tahoma, sans-serif;
+    margin-top: 6px;
+}
+/* contact us page styling ends here*/
+/* work page styling starts from here*/
+.work-section{
+    height: auto;
+    background-color: white;
+}
+.work-section h2{
+    text-align: center;
+    font-size: 38px;
+    color: purple;
+    padding-top: 10px;
+    background-color: rgb(179, 212, 233);
+    margin-top: 15px;
+}
+.work-container{
+    width: 97%;
+    border: 1px solid purple;
+    height: 150px;
+    margin: 5px auto 15px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.work-container-child{
+    border: 1px solid purple;
+    width: 33.33%;
+    height: 75px;
+}
+.work-container-child p{
+    text-align: center;
+    font-size: 2.3vw;
+    line-height: 75px;
+}
+.partner-work-child{
+    height: 150px;
+    border: 1px solid red;
+    width: 33.33%;
+    border-left: 10px solid green;
+}
+.partner-work-child h3{
+    font-size: 2.5vw;
+    background: none;
+    border: none;
+    text-shadow: none;
+    padding: 0;
+}
+#p-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.p-work-status-container{
+    width: 70%;
+    border-right: 2px solid black;
+}
+.p-work-status-child{
+    font-size: 2.3vw;
+    padding: 10px 12px 5px;
+}
+.indicator-container{
+    width: 28%;
+    height: 30px;
+}
+.indicator-container p{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 10px;
+}
+.indicator{
+    width: 45px;
+    height: 45px;
+    margin: 6px auto;
+    border-radius: 15px;
+    background-color: green;
+}
+/* work page styling ends here*/
+/* partners page styling starts from here */
+.height-auto{
+    height: auto;
+}
+.partner-section{
+    background-color: blanchedalmond;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+.column{
+    width: 48%;
+    height: 250px;
+    border: 2px inset red;
+    display: flex;
+    background-color: rgb(189, 224, 244);
+}
+.profile-pic{
+    border: 2px inset red;
+    width: 35%;
+    height: 200px;
+    margin: 25px 15px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.profile-pic .pic{
+    width: 100%;
+    height: auto;
+    
+}
+.details{
+    width: 60%;
+    height: 200px;
+    margin: 25px 15px;
+
+    
+}
+.details h3{
+    font-size: 3vw;
+    background: none;
+    border: none;
+    text-shadow: none;
+    padding: 0;
+}
+.details p {
+	margin-left: 19px;
+	font-size: 22px;
+	margin-top: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+.button-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.button-container button{
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #f1c040;
+    cursor: pointer;
+}
+#bottom-button-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 700px;
+    margin: auto;
+}
+#bottom-button-container button{
+    font-size: 25px;
+    padding: 8px 10px;
+    background-color: #f1c040;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+#bottom-button-container button:first-child{
+    padding: 8px 24px;
+}
+#bottom-button-container a{
+    text-decoration: none;
+    color: inherit;
+}
+/* login page style*/
+#login-form-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(90,90,90,0.8);
+    display: none;
+    position: absolute;
+    bottom: 0 ;
+}
+form{
+    width: 280px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid purple;
+    background-color: blanchedalmond;
+    position: relative;
+}
+#login-board{
+    background-color:rgb(71, 158, 212);
+    text-align: center;
+    font-size: 2.7vw;
+    border-bottom: 15px solid #f1c040;
+    padding: 10px;
+}
+#login-closer{
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+    font-size: 18px;
+    background-color: rgba(80,80,80,0.5);
+    cursor: pointer;
+}
+#mobile-label,label{
+    font-size: 2vw;
+    display: block;
+    padding: 5px 12px;
+    margin-top: 15px;
+}
+#password-label{
+    margin-top: 8px;
+}
+.login-container input{
+    display: block;
+    width: 170px;
+    margin: 5px auto;
+    font-size: 1.8vw;
+    padding: 2px 18px ;
+}
+#login button{
+    display: block;
+    width: 175px;
+    font-size: 1.6vw;
+    margin: 20px auto 0px;
+    padding: 6px 15px;
+    background-color: #f1c040;
+}
+#register{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 25px;
+}
+/* partners page styling ends here*/
+
+/* Salary Calculator Styling starts form here */
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
+.display-container{
+    height: 56%;
+    width: 100%;
+}
+.receipt{
+    width: 80%;
+    background-color: #ffffff86;
+    backdrop-filter: blur(5px);
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.receipt h4{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+}
+.personal-details,.work-status{
+    width: 49.8%;
+    padding: 10px;
+}
+.personal-details{
+    border-right: 3px solid green;
+}
+.personal-details ul,.work-status ul{
+    list-style-type: none;
+    padding: 6px;
+}
+.personal-details li,.work-status li{
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+}
+.calculator-control-container{
+    height: 30%;
+    width: 100%;
+    align-items: last baseline;
+}
+#controlPanel{
+    width: 70%;
+    height: 50%;
+    justify-content: center;
+    align-items: last baseline;
+    margin-bottom: 20px;
+    /* margin: 30px auto; */
+}
+#addData , #viewData,#select, #select select{
+    width: 177px;
+    height: 50px;
+    font-size: 1.6vw;
+    margin: 20px auto 10px;
+    padding: 6px 10px;
+    background-color: #f1c040;
+}
+#select{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: none;
+    display: none;
+    transition: display 2s;
+}
+#select select{
+    border: 2px solid black;
+}
